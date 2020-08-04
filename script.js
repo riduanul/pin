@@ -1,5 +1,6 @@
 
-const notify = document.getElementById("notify").style.display = 'none';
+const notify = document.getElementById("notify-matched").style.display = 'none';
+const notifyNot = document.getElementById("notify-notMatched").style.display = 'none';
 
 const generateBtn = document.getElementById("generateBtn");
 const generatePin = document.getElementById("generatePin");
@@ -12,13 +13,13 @@ function number (data){
     
     switch (data) {
         case "C" :
-            input.innerHTML = "";
+            inputPin.innerHTML = "";
             break;
         case "<" :
-            input.innerHTML = input.innerHTML.substr(0, input.innerHTML.length - 1);
+            inputPin.innerHTML = inputPin.innerHTML.substr(0, inputPin.innerHTML.length - 1);
             break;
     default :
-      input.innerHTML += data;
+    inputPin.innerHTML += data;
 
     }
 }
@@ -34,15 +35,16 @@ function number (data){
      
 
      function submit (){
-         if (input.innerHTML === generatePin.innerHTML){
-             document.getElementById("notify-matched").style.display = "block";
+       
+        if ( generatePin.innerHTML== inputPin.innerHTML){
+            document.getElementById("notify-matched").style.display = "block";
          }
          else{
-             document.getElementById("notify-notMatched").style.display = "block";
+           document.getElementById("notify-notMatched").style.display = "block";
          }
         
         }
 
-
+        
    
    
