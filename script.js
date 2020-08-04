@@ -36,7 +36,7 @@ function number (data){
 
      function submit (){
        
-        if ( generatePin.innerHTML== inputPin.innerHTML){
+        if ( generatePin.innerHTML == inputPin.innerHTML){
             document.getElementById("notify-matched").style.display = "block";
          }
          else{
